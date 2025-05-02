@@ -168,7 +168,7 @@
                 &kp RIGHT  &kp PSCRN               &mkp MB4      &my_sp         &my_dq         &my_kakko    &my_sq  &kp RSHIFT
                 &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp ESC        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
                 &none      &mkp MCLK  &kp JP_MHEN  &my_br        &kp JP_UNDER
-                &kp C                 &kp D        &kp E         &kp PSCRN      &kp G   &kp H               &bt BT_SEL 1   &bt BT_SEL 2
+                &kp C                 &kp D        &kp E         &kp F      &kp G   &kp H               &bt BT_SEL 1   &bt BT_SEL 2
             >;
             sensor-bindings = <&mouse_scroll SCRL_UP SCRL_DOWN &mouse_scroll SCRL_UP SCRL_DOWN>;
         };
