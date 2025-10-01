@@ -3,14 +3,27 @@ if SHIELD_MoooseFree_RIGHT
 config ZMK_KEYBOARD_NAME
     default "MoooseFree"
 
+config ZMK_SPLIT
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_SPLIT_BLE_CENTRAL_SPLIT_RUN_STACK_SIZE
+    int
+    default 2048
+
 endif
 
-if SHIELD_MoooseFree_LEFT || SHIELD_MoooseFree_RIGHT
+
+if SHIELD_MoooseFree_LEFT
 
 config ZMK_SPLIT
     default y
 
+config CONFIG_ZMK_SPLIT_BLE_PERIPHERAL_STACK_SIZE
+    int
+    default 2048
+
 endif
+
