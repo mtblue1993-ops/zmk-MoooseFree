@@ -205,7 +205,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
         };
         FUNCTION {
             bindings = <
@@ -223,7 +223,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
