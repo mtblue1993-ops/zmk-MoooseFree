@@ -1,8 +1,24 @@
 #include "MoooseFree.dtsi"
 
+right_encoder: encoder_right {
+    compatible = "alps,ec11";
+    a-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    steps = <24>;
+    status = "disabled";
+};
+
+sensors_right: keymap_sensors_right {
+    compatible = "zmk,keymap-sensors";
+    sensors = <&right_encoder>;
+    triggers-per-rotation = <24>;
+};
+
 &left_encoder {
     status = "okay";
 };
+
+
 
 / {
     trackball: trackball {
