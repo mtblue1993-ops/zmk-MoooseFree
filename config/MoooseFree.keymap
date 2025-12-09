@@ -53,6 +53,26 @@
 #define JP_QMARK LS(JP_SLASH) // ?
 #define JP_UNDER LS(JP_BSLH)  // _
 
+#ifdef RIGHT
+/ {
+    sensors_right: sensors_right {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&right_encoder>;
+        triggers-per-rotation = <24>;
+    };
+}
+#endif
+
+#ifdef LEFT
+/ {
+    sensors_left: sensors_left {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <12>;
+    };
+}
+#endif
+
 / {
     macros {
         to_layer_0: to_layer_0 {
