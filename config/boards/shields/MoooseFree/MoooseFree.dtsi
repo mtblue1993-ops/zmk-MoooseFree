@@ -189,15 +189,10 @@
         status = "disabled";
     };
 
-    sensors_R: sensors_R {
+    sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors_R = <&right_encoder>;
-        triggers-per-rotation = <24>;
-    };
-    sensors_L: sensors_L {
-        compatible = "zmk,keymap-sensors";
-        sensors_L = <&left_encoder>;
-        triggers-per-rotation = <12>;
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <24 24>;
     };
 };
 
