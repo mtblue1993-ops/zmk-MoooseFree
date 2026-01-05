@@ -142,11 +142,11 @@
                 /* 日本語入力側に寄せる */
               , <&macro_tap &kp LANG1>
         
-                /* （ ） を入力（IMEが全角にしてくれる想定） */
-              , <&macro_tap &kp JP_LPAR>
-              , <&macro_tap &kp JP_RPAR>
+                /* 括弧：US配列の位置（Shift+9 / Shift+0） */
+              , <&macro_tap &kp LS(N9)>   /* (  → IMEが全角記号なら （ */
+              , <&macro_tap &kp LS(N0)>   /* )  → IMEが全角記号なら ） */
         
-                /* 日本語入力だと未確定になることがあるので確定 */
+                /* 未確定になることがあるので確定 */
               , <&macro_tap &kp ENTER>
         
                 /* カーソルを括弧の中へ */
