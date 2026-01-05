@@ -136,20 +136,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                /* 変換中の文字が残ってたらキャンセル（誤爆防止） */
-                <&macro_tap &kp ESC>
+                /* 日本語入力側に寄せる（全角記号設定なら（ ）になる） */
+                <&macro_tap &kp LANG1>
         
-                /* 日本語入力側に寄せる */
-              , <&macro_tap &kp LANG1>
+                /* 括弧（US配列位置：Shift+9 / Shift+0） */
+              , <&macro_tap &kp LS(N9)>
+              , <&macro_tap &kp LS(N0)>
         
-                /* 括弧：US配列の位置（Shift+9 / Shift+0） */
-              , <&macro_tap &kp LS(N9)>   /* (  → IMEが全角記号なら （ */
-              , <&macro_tap &kp LS(N0)>   /* )  → IMEが全角記号なら ） */
-        
-                /* 未確定になることがあるので確定 */
-              , <&macro_tap &kp ENTER>
-        
-                /* カーソルを括弧の中へ */
+                /* カーソルを括弧の中へ（セル編集モード前提） */
               , <&macro_tap &kp LEFT>
               ;
         };
