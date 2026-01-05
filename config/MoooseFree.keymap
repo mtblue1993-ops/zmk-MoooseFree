@@ -115,6 +115,9 @@
               , <&macro_tap     &kp JP_SEMI>
               , <&macro_release &kp LCTRL>
 
+                /* 半角スペース（日付と名前の間） */
+              , <&macro_tap &kp SPACE>
+
                 /* nm（実際の入力はAOYAMA） */
               , <&macro_tap &kp A>
               , <&macro_tap &kp O>
@@ -127,6 +130,27 @@
               , <&macro_press   &kp LALT>
               , <&macro_tap     &kp ENTER>
               , <&macro_release &kp LALT>
+              ;
+        };
+        my_paren_lang1: my_paren_lang1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                /* 変換中の文字が残ってたらキャンセル（誤爆防止） */
+                <&macro_tap &kp ESC>
+        
+                /* 日本語入力側に寄せる */
+              , <&macro_tap &kp LANG1>
+        
+                /* （ ） を入力（IMEが全角にしてくれる想定） */
+              , <&macro_tap &kp JP_LPAR>
+              , <&macro_tap &kp JP_RPAR>
+        
+                /* 日本語入力だと未確定になることがあるので確定 */
+              , <&macro_tap &kp ENTER>
+        
+                /* カーソルを括弧の中へ */
+              , <&macro_tap &kp LEFT>
               ;
         };
     };
