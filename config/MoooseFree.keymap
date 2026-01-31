@@ -173,6 +173,19 @@
             bindings = <&msc>, <&msc>;
             tap-ms = <20>;
         };
+        my_make_link_alt_once: my_make_link_alt_once {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                /* Alt 単押し */
+                <&macro_tap &kp LALT>
+
+                /* 続けて Z → S → C */
+              , <&macro_tap &kp Z>
+              , <&macro_tap &kp S>
+              , <&macro_tap &kp C>
+              ;
+        };
     };
 
     keymap {
