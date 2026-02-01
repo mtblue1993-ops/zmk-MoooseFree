@@ -190,19 +190,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                /* Win+X（クイックリンクメニュー） */
                 <&macro_press   &kp LGUI>
               , <&macro_tap     &kp X>
               , <&macro_release &kp LGUI>
-
-                /* メニュー描画待ち（環境で調整） */
               , <&macro_wait_ms 120>
-
-                /* U（シャットダウンまたはサインアウト） */
               , <&macro_tap     &kp U>
               , <&macro_wait_ms 60>
-
-                /* S（スリープ） */
               , <&macro_tap     &kp S>
               ;
         };
