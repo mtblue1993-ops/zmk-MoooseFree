@@ -434,19 +434,19 @@
         };
         AHK {
             bindings = <
-                &kp TAB     &kp F15      &kp F16      &kp F17      &kp F18       &kp F19                  &kp RIGHT
-                &kp LALT    &kp LC(F15)  &kp LC(F16)  &kp LC(F17)  &kp LC(F18)   &kp LC(F19)              &kp LEFT
-                &kp LSHIFT  &kp LS(F15)  &kp LS(F16)  &kp LS(F17)  &kp LS(F18)   &kp LS(F19)   &kp C_MUTE &kp DOWN
-                &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                          &kp DEL       &kp ESC    &kp UP
-                                                          &kp BSPC   &kp SPACE   &kp JP_HENK   &kp PSCRN  &kp ENTER
-                &kp C   &kp D   &kp C   &kp D        &kp F   &kp G   &kp H                       &kp I
-
-                &kp UP                               &kp F20     &kp F21        &kp F22        &kp F23      &kp F24       &kp JP_YEN
-                &kp DOWN                             &kp LC(F20) &kp LC(F21)    &kp LC(F22)    &kp LC(F23)  &kp LC(F24)   &kp JP_COLON
-                &kp RIGHT  &kp PSCRN                 &kp LS(F20) &kp LS(F21)    &kp LS(F22)    &kp LS(F23)  &kp LS(F24)   &kp RSHIFT
-                &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
-                &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
-                &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
+                &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans
+        
+                &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans
             >;
             sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
         };
