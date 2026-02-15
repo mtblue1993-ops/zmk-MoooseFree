@@ -400,18 +400,17 @@
             bindings = <
                 &kp ESC       &trans     &kp F2      &kp F3      &kp F4      &kp F5                                      &trans
                 &trans        &kp F6     &kp F7      &kp F8      &kp F9      &kp F10                                     &trans
-                &trans        &kp F11    &kp F12     &kp C       &kp V       &kp V                             &trans     &trans
-                &trans        &trans     &trans      &kp TAB                         &kp F4      &kp TAB     &kp UP
+                &trans        &kp F11    &kp F12     &kp C       &kp V       &kp V                            &trans     &trans
+                &trans        &trans     &trans      &lt_to_layer_0 4 TAB                 &kp F4      &kp TAB    &kp TAB
+                                                     &trans      &trans      &trans       &trans      &none
+                &trans        &trans     &trans      &trans       &trans      &trans      &trans                             &trans
         
-                                              &trans      &trans      &trans       &trans      &none
-                &kp C         &kp D      &kp C        &kp D          &kp F         &kp G       &kp H                        &kp I
-        
-                &kp N7        &kp N8     &kp N9       &kp ASTRK      &kp KP_SLASH  &trans      &trans
-                &kp N4        &kp N5     &kp N6       &kp PLUS       &kp JP_SEMI   &trans      &trans
-                &kp N1        &kp N2     &kp N3       &kp KP_DOT     &kp JP_BSLH   &trans      &trans            &trans
-                &trans        &trans     &trans                                  &kp MINUS    &kp EQUAL     &kp JP_LBRC  &kp JP_RBRC
-                &kp N0        &trans     &trans       &trans         &trans
-                &kp C         &kp D      &kp E        &kp PSCRN                  &kp G         &kp H       &kp G         &kp H
+                &kp N7                            &kp N8      &kp N9        &kp ASTRK     &kp KP_SLASH  &trans      &trans
+                &trans                            &kp N4      &kp N5        &kp N6        &kp PLUS      &kp JP_SEMI &trans
+                &kp N1       &trans               &kp N2      &kp N3        &kp KP_DOT    &kp JP_BSLH   &trans      &trans
+                &trans       &trans     &trans                                 &kp MINUS    &kp EQUAL    &kp JP_LBRC  &kp JP_RBRC
+                &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp N0     &kp BSPC
+                &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &trans  &trans  &kp G   &kp H
             >;
             sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
         };
