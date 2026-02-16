@@ -423,28 +423,28 @@
                                               &trans     &trans     &trans       &trans     &none
                 &kp C   &kp D   &kp C   &kp D        &kp F        &kp G          &kp H                               &kp I
         
-                &trans                       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &kp HOME
-                &trans                       &kp LA(N4)   &kp LA(N5)   &kp LA(N6)   &trans       &trans       &kp END
-                &trans    &trans            &kp LA(N1)   &kp LA(N2)   &kp LA(N3)   &kp PG_UP    &trans       &trans
-                &trans    &trans     &trans                                 &kp PG_UP    &kp PG_DN    &kp PG_DN    &trans
-                &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp N0     &kp BSPC
+                &trans                       &kp LS(N6)       &kp LS(N7)       &kp LS(N8)       &kp LS(N9)       &kp LS(N0)       &kp HOME
+                &trans                       &kp LG(N4)   &kp LG(N5)   &kp LG(N6)   &trans       &trans       &kp END
+                &trans    &trans            &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &trans    &kp PG_UP       &trans
+                &trans    &trans    &trans                                 &trans    &kp LG(PG_UP)    &kp PG_DN    &kp LG(PG_DN)
+                &trans    &trans    &trans  &kp N0     &kp BSPC
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
             sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
         };
         AHK {
             bindings = <
-                &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &kp LC(W) &trans &kp LA(F4) &kp LC(T) &trans
+                &trans &trans &kp LS(LG(S)) &trans &kp LC(LA(N4)) &kp LC(LS(W)) &trans
+                &trans &trans &kp LC(LS(X)) &trans &kp LG(V) &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
         
-                &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &alt_7 &alt_8 &alt_9 &trans &trans
+                &trans &trans &alt_4 &alt_5 &alt_6 &trans &trans
+                &trans &trans &alt_1 &alt_2 &alt_3 &kp LS(LG(LEFT))    &kp LG(UP)    &kp LS(LG(RIGHT))
+                &trans &trans &trans &trans &trans &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(RIGHT)
                 &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
             >;
