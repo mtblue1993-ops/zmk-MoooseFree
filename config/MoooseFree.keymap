@@ -408,8 +408,8 @@
                 &trans                            &kp N7      &kp N8        &kp N9     &kp KP_ASTERISK  &kp KP_SLASH      &trans
                 &trans                            &kp N4      &kp N5        &kp N6        &kp KP_PLUS      &kp LS(JP_SEMI) &trans
                 &trans       &trans               &kp N1      &kp N2        &kp N3    &kp JP_DOT   &kp BSLH      &trans
-                &trans       &trans     &trans                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp JP_LBRC
-                &trans  &trans  &trans  &trans     &kp N0
+                &trans       &trans     &my_dtnm                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp JP_LBRC
+                &trans  &trans  &my_paren_lang1  &trans     &kp N0
                 &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &trans  &trans  &kp G   &kp H
             >;
             sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
@@ -441,9 +441,9 @@
                 &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
         
-                &trans &trans &alt_7 &alt_8 &alt_9 &trans &trans
-                &trans &trans &alt_4 &alt_5 &alt_6 &trans &trans
-                &trans &alt_1 &alt_2 &alt_3 &kp LS(LG(LEFT))    &kp LG(UP)    &kp LS(LG(RIGHT))
+                &alt_7 &alt_8 &alt_9 &trans &trans &trans &trans
+                &alt_4 &alt_5 &alt_6 &trans &trans &trans &trans &trans 
+                &alt_1 &alt_2 &alt_3 &kp LS(LG(LEFT))    &kp LG(UP)    &kp LS(LG(RIGHT))
                 &trans &trans &trans &trans &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(RIGHT)
                 &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
