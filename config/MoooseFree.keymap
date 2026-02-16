@@ -388,7 +388,7 @@
                 &kp C   &kp D &kp C   &kp D     &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                   &bt BT_CLR
         
                 &kp UP                              &kp Y       &kp U          &kp I          &kp O        &kp P         &kp EQUAL
-                &RIGHT                              &kp H       &kp J          &kp K          &kp L        &kp JP_SEMI   &kp JP_COLON
+                &kp RIGHT                              &kp H       &kp J          &kp K          &kp L        &kp JP_SEMI   &kp JP_COLON
                 &kp DOWN    &kp C_MUTE                &kp N       &kp M          &kp JP_COMMA   &kp JP_DOT   &kp UP        &kp JP_SLASH
                 &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp MINUS     &kp LEFT     &kp DOWN      &kp RIGHT
                 &mkp MCLK  &kp LS(ENTER)  &kp BSPC  &kp ENTER   &lt_to_layer_0 2 LANG2 
