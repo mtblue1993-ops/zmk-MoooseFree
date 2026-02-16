@@ -380,9 +380,9 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp GRAVE     &kp Q      &kp W    &kp E   &kp R   &kp T                                       &kp RIGHT
-                &kp TAB       &kp A      &kp S    &kp D   &kp F   &kp G                                       &kp LEFT
-                &kp LSHIFT    &kp Z      &kp X    &kp C   &kp V   &kp B                            &kp LA(LG(K)) &kp DOWN
+                &kp GRAVE     &kp Q      &kp W    &kp E   &kp R   &kp T                                       &kp LC(LG(RIGHT))
+                &kp TAB       &kp A      &kp S    &kp D   &kp F   &kp G                                       &kp LC(LG(LEFT))
+                &kp LSHIFT    &kp Z      &kp X    &kp C   &kp V   &kp B                                       &kp LA(LG(K))    &kp DOWN
                 &kp LCTRL     &kp LWIN   &kp LALT &lt_to_layer_0 3 TAB                &kp LG(C)        &my_make_link_alt_once    &kp UP
                 &lt_to_layer_0 1 LANG1         &kp SPACE   &kp DEL  &kp LA(ENTER)        &kp LC(LG(D))
                 &kp C   &kp D &kp C   &kp D     &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                   &bt BT_CLR
@@ -400,15 +400,15 @@
             bindings = <
                 &kp ESC       &trans     &kp F2      &kp F3      &kp F4      &kp F5                                      &trans
                 &trans        &kp F6     &kp F7      &kp F8      &kp F9      &kp F10                                     &trans
-                &trans        &kp F11    &kp F12     &kp LC(C)       &kp LC(LS(V))       &kp LC(LA(V))                            &trans     &trans
-                &trans        &trans     &trans      &trans                 &trans      &trans    &trans
-                                                     &trans      &trans      &trans       &trans      &none
+                &trans        &kp F11    &kp F12     &kp LC(C)       &kp LC(LS(V))       &kp LC(LA(V))                   &trans    &trans
+                &trans        &trans     &trans      &LS(LA(TAB))                 &trans      &trans    &trans
+                                                     &trans      &trans      &trans       &trans      &LC(LG(F4))
                 &trans        &trans     &trans      &trans       &trans      &trans      &trans                             &trans
         
-                &trans                            &kp N7      &kp N8        &kp N9     &kp KP_ASTERISK  &kp KP_SLASH      &trans
-                &trans                            &kp N4      &kp N5        &kp N6        &kp KP_PLUS      &kp LS(JP_SEMI) &trans
-                &trans       &trans               &kp N1      &kp N2        &kp N3    &kp JP_DOT   &kp BSLH      &trans
-                &trans       &trans     &my_dtnm                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp JP_LBRC
+                &trans                            &kp N7      &kp N8        &kp N9    &kp KP_ASTERISK  &kp KP_SLASH      &trans
+                &trans                            &kp N4      &kp N5        &kp N6    &kp KP_PLUS      &kp LS(JP_SEMI)   &trans
+                &LC(TAB)       &trans             &kp N1      &kp N2        &kp N3    &kp JP_DOT       &kp BSLH          &trans
+                &LC(LS(TAB))       &trans     &my_dtnm                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp JP_LBRC
                 &trans  &trans  &my_paren_lang1  &trans     &kp N0
                 &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &trans  &trans  &kp G   &kp H
             >;
@@ -416,16 +416,16 @@
         };
         NUM {
             bindings = <
-                &trans     &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &kp LS(N4)   &kp LS(N5)                          &trans
-                &trans     &trans       &trans       &trans       &trans       &trans                               &trans
-                &trans     &trans       &trans       &trans       &trans       &trans                    &trans     &trans
+                &trans     &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &kp LS(N4)   &kp LS(N5)                            &trans
+                &trans     &trans       &trans       &trans       &trans       &trans                                &trans
+                &trans     &trans       &trans       &trans       &trans       &trans                                &trans    &trans
                 &trans     &trans       &trans       &trans                           &trans               &trans     &trans
-                                              &trans     &trans     &trans       &trans     &none
+                                              &trans     &trans     &trans       &trans     &trans
                 &kp C   &kp D   &kp C   &kp D        &kp F        &kp G          &kp H                               &kp I
         
                 &trans                       &kp LS(N6)       &kp LS(N7)       &kp LS(N8)       &kp LS(N9)       &kp LS(N0)       &kp HOME
                 &trans                       &kp LG(N4)   &kp LG(N5)   &kp LG(N6)   &trans       &trans       &kp END
-                &trans    &trans            &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &trans    &kp PG_UP       &trans
+                &trans    &trans    &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &trans    &kp PG_UP       &trans
                 &trans    &trans    &trans                                 &trans    &kp LG(PG_UP)    &kp PG_DN    &kp LG(PG_DN)
                 &trans    &trans    &trans  &trans     &trans
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
@@ -456,14 +456,14 @@
                 &kp LALT    &kp LA(N1)   &kp LA(N2)   &kp LA(N3)   &kp LA(N4)    &kp LA(N5)               &kp LEFT
                 &kp LSHIFT  &kp F1       &kp F2       &kp F3       &kp F4        &kp F5        &kp C_MUTE &kp DOWN
                 &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                          &kp DEL       &kp ESC    &kp UP
-                                                          &kp BSPC   &kp SPACE   &kp JP_HENK   &kp PSCRN  &none
+                                                          &kp BSPC   &kp SPACE   &kp JP_HENK   &kp PSCRN  &trans
                 &kp C   &kp D  &kp C   &kp D         &kp F   &kp G   &kp H                       &kp I
 
                 &kp UP                               &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)   &kp LS(N0)    &kp JP_YEN
                 &kp DOWN                             &kp LC(N6)  &kp LC(N7)     &kp LC(N8)     &kp LC(N9)   &kp LC(N0)    &kp JP_COLON
                 &kp RIGHT  &kp PSCRN                 &kp F6      &kp F7         &kp F8         &kp F9       &kp F10       &kp RSHIFT
                 &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
-                &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
+                &trans  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
             sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
