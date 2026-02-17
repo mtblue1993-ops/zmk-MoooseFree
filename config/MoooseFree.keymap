@@ -118,13 +118,17 @@
         my_excel_open_desktop_zmo: my_excel_open_desktop_zmo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+        
             bindings =
-                /* Alt 単押し */
+                /* KeyTips を出す */
                 <&macro_tap &kp LALT>
-
-                /* 続けて Z → M → O */
+              , <&macro_wait_time 120>
+        
+                /* Z → M → O */
               , <&macro_tap &kp Z>
+              , <&macro_wait_time 60>
               , <&macro_tap &kp M>
+              , <&macro_wait_time 60>
               , <&macro_tap &kp O>
               ;
         };
@@ -426,7 +430,7 @@
                 &trans                       &kp LS(N6)       &kp LS(N7)       &kp LS(N8)       &kp LS(N9)       &kp LS(N0)       &kp HOME
                 &trans                       &kp LG(N4)   &kp LG(N5)   &kp LG(N6)   &trans       &trans       &kp END
                 &trans    &trans    &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &trans    &kp PG_UP       &trans
-                &trans    &trans    &trans                                 &trans    &kp LG(PG_UP)    &kp PG_DN    &kp LG(PG_DN)
+                &trans    &trans    &trans                                 &trans    &kp LC(PG_UP)    &kp PG_DN    &kp LC(PG_DN)
                 &trans    &trans    &trans  &trans     &trans
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
