@@ -412,7 +412,7 @@
                 &trans                            &kp N7      &kp N8        &kp N9    &kp KP_ASTERISK  &kp KP_SLASH      &trans
                 &trans                            &kp N4      &kp N5        &kp N6    &kp KP_PLUS      &kp LS(JP_SEMI)   &trans
                 &kp LC(TAB)       &trans             &kp N1      &kp N2        &kp N3    &kp JP_DOT       &kp BSLH          &trans
-                &kp LC(LS(TAB))       &trans     &my_dtnm                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp BSLH
+                &kp LC(LS(TAB))       &trans     &my_dtnm                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp JP_LBKT
                 &trans  &trans  &my_paren_lang1  &trans     &kp N0
                 &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &trans  &trans  &kp G   &kp H
             >;
