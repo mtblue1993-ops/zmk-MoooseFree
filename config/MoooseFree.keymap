@@ -126,9 +126,9 @@
         
                 /* Z → M → O */
               , <&macro_tap &kp Z>
-              , <&macro_wait_time 60>
+              , <&macro_wait_time 120>
               , <&macro_tap &kp M>
-              , <&macro_wait_time 60>
+              , <&macro_wait_time 120>
               , <&macro_tap &kp O>
               ;
         };
