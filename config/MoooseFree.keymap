@@ -123,13 +123,13 @@
             bindings =
                 /* KeyTips を出す */
                 <&macro_tap &kp LALT>
-              , <&macro_wait_time 120>
+              , <&macro_wait_time 300>
         
                 /* Z → M → O */
               , <&macro_tap &kp Z>
-              , <&macro_wait_time 120>
+              , <&macro_wait_time 300>
               , <&macro_tap &kp M>
-              , <&macro_wait_time 120>
+              , <&macro_wait_time 300>
               , <&macro_tap &kp O>
               ;
         };
@@ -155,13 +155,13 @@
               , <&macro_release &kp LGUI>
         
                 /* ★最重要：Win+Xメニューが開ききるまで待つ */
-              , <&macro_wait_time 300>
+              , <&macro_wait_time 400>
         
                 /* U（シャットダウンまたはサインアウト） */
               , <&macro_tap     &kp U>
         
                 /* ★サブメニューが開くまで待つ */
-              , <&macro_wait_time 250>
+              , <&macro_wait_time 400>
         
                 /* S（スリープ） */
               , <&macro_tap     &kp S>
