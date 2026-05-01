@@ -390,7 +390,7 @@
                 &kp GRAVE     &kp Q      &kp W    &kp E   &kp R   &kp T                                       &kp LC(LG(RIGHT))
                 &kp TAB       &kp A      &kp S    &kp D   &kp F   &kp G                                       &kp LC(LG(LEFT))
                 &kp LSHIFT    &kp Z      &kp X    &kp C   &kp V   &kp B                                       &kp LA(LG(K))    &kp DOWN
-                &kp LCTRL     &kp LWIN   &kp LALT &lt_to_layer_0 3 TAB                &kp LG(C)        &my_make_link_alt_once    &kp UP
+                &kp LCTRL     &kp LWIN   &kp LALT &lt_to_layer_0 3 LALT                &kp LG(C)        &my_make_link_alt_once    &kp UP
                 &lt_to_layer_0 1 LANG1    &kp SPACE    &kp DEL    &kp LA(ENTER)    &kp LC(LG(D))
                 &kp C   &kp D &kp C   &kp D     &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                   &bt BT_CLR
         
