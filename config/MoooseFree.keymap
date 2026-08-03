@@ -347,6 +347,78 @@
               , <&macro_tap &kp LEFT>
               ;
         };
+        md_h1: md_h1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings =
+                <&macro_tap &kp LANG2>
+              , <&macro_tap &kp JP_HASH>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp LANG1>
+              ;
+        };
+
+        md_h2: md_h2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings =
+                <&macro_tap &kp LANG2>
+              , <&macro_tap &kp JP_HASH>
+              , <&macro_tap &kp JP_HASH>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp LANG1>
+              ;
+        };
+
+        md_h3: md_h3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings =
+                <&macro_tap &kp LANG2>
+              , <&macro_tap &kp JP_HASH>
+              , <&macro_tap &kp JP_HASH>
+              , <&macro_tap &kp JP_HASH>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp LANG1>
+              ;
+        };
+
+        md_ordered: md_ordered {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings =
+                <&macro_tap &kp LANG2>
+              , <&macro_tap &kp N1>
+              , <&macro_tap &kp JP_DOT>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp LANG1>
+              ;
+        };
+
+        md_task: md_task {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings =
+                <&macro_tap &kp LANG2>
+              , <&macro_tap &kp JP_MINUS>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp JP_LBKT>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp JP_RBKT>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp LANG1>
+              ;
+        };
     };
 
     behaviors {
@@ -467,9 +539,9 @@
                 &kp C   &kp D  &kp C   &kp D         &kp F   &kp G   &kp H                       &kp I
 
                 &kp UP                               &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)   &kp LS(N0)    &kp JP_YEN
-                &kp DOWN                             &kp LC(N6)  &kp LC(N7)     &kp LC(N8)     &kp LC(N9)   &kp LC(N0)    &kp JP_COLON
-                &kp RIGHT  &kp PSCRN                 &kp F6      &kp F7         &kp F8         &kp F9       &kp F10       &kp RSHIFT
-                &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
+                &kp DOWN                             &md_h1      &md_h2         &md_h3         &kp LC(N9)   &kp LC(N0)    &kp JP_COLON
+                &kp RIGHT  &kp PSCRN                 &md_ordered &kp F7         &kp F8         &kp F9       &kp F10       &kp RSHIFT
+                &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &md_task      &kp JP_AT
                 &trans  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
