@@ -96,12 +96,16 @@
         my_br: my_br {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp JP_MHEN>
-                , <&macro_tap &kp JP_LT>
-                , <&macro_tap &kp B>
-                , <&macro_tap &kp R>
-                , <&macro_tap &kp JP_RT>
-                ;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings =
+                <&macro_tap &kp LANG2>
+              , <&macro_tap &kp JP_LT>
+              , <&macro_tap &kp B>
+              , <&macro_tap &kp R>
+              , <&macro_tap &kp JP_RT>
+              , <&macro_tap &kp LANG1>
+              ;
         };
         my_make_link_alt_once: my_make_link_alt_once {
             compatible = "zmk,behavior-macro";
@@ -412,9 +416,9 @@
                 <&macro_tap &kp LANG2>
               , <&macro_tap &kp JP_MINUS>
               , <&macro_tap &kp SPACE>
-              , <&macro_tap &kp JP_LBKT>
+              , <&macro_tap &kp JP_AT>
               , <&macro_tap &kp SPACE>
-              , <&macro_tap &kp JP_RBKT>
+              , <&macro_tap &kp JP_LBKT>
               , <&macro_tap &kp SPACE>
               , <&macro_tap &kp LANG1>
               ;
