@@ -96,16 +96,12 @@
         my_br: my_br {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <30>;
-            bindings =
-                <&macro_tap &kp LANG2>
-              , <&macro_tap &kp JP_LT>
-              , <&macro_tap &kp B>
-              , <&macro_tap &kp R>
-              , <&macro_tap &kp JP_RT>
-              , <&macro_tap &kp LANG1>
-              ;
+            bindings = <&macro_tap &kp JP_MHEN>
+                , <&macro_tap &kp JP_LT>
+                , <&macro_tap &kp B>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp JP_RT>
+                ;
         };
         my_make_link_alt_once: my_make_link_alt_once {
             compatible = "zmk,behavior-macro";
@@ -351,6 +347,7 @@
               , <&macro_tap &kp LEFT>
               ;
         };
+        // Markdown helpers: force half-width input, type the prefix, then restore Japanese input.
         md_h1: md_h1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -416,13 +413,14 @@
                 <&macro_tap &kp LANG2>
               , <&macro_tap &kp JP_MINUS>
               , <&macro_tap &kp SPACE>
-              , <&macro_tap &kp JP_AT>
-              , <&macro_tap &kp SPACE>
               , <&macro_tap &kp JP_LBKT>
+              , <&macro_tap &kp SPACE>
+              , <&macro_tap &kp JP_RBKT>
               , <&macro_tap &kp SPACE>
               , <&macro_tap &kp LANG1>
               ;
         };
+
     };
 
     behaviors {
@@ -463,15 +461,15 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp GRAVE     &kp Q      &kp W    &kp E   &kp R   &kp T                                       &kp LC(LG(RIGHT))
-                &kp TAB       &kp A      &kp S    &kp D   &kp F   &kp G                                       &kp LC(LG(LEFT))
-                &kp LSHIFT    &kp Z      &kp X    &kp C   &kp V   &kp B                                       &kp LA(LG(K))    &kp DOWN
-                &kp LCTRL     &kp LWIN   &kp LALT &lt_to_layer_0 3 TAB                &kp LG(N7)        &my_make_link_alt_once    &kp UP
-                &lt_to_layer_0 1 LANG1    &kp SPACE    &kp DEL    &kp LG(N8)    &kp LC(LG(D))
+                &kp GRAVE     &kp Q      &kp W    &kp E   &kp R   &kp T                                       &kp LA(RIGHT)
+                &kp TAB       &kp A      &kp S    &kp D   &kp F   &kp G                                       &kp LA(LEFT)
+                &kp LSHIFT    &kp Z      &kp X    &kp C   &kp V   &kp B                                       &kp LA(LG(K))    &kp PG_DN
+                &kp LCTRL     &kp LWIN   &kp LALT &lt_to_layer_0 3 TAB                &kp LG(N7)        &my_make_link_alt_once    &kp PG_UP
+                &lt_to_layer_0 1 LANG1    &kp SPACE    &kp DEL    &kp LG(N8)    &kp F5
                 &kp C   &kp D &kp C   &kp D     &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                   &bt BT_CLR
         
-                &kp UP                              &kp Y       &kp U          &kp I          &kp O        &kp P         &kp EQUAL
-                &kp DOWN                            &kp H       &kp J          &kp K          &kp L        &kp JP_SEMI   &kp JP_COLON
+                &kp HOME                              &kp Y       &kp U          &kp I          &kp O        &kp P         &kp EQUAL
+                &kp END                            &kp H       &kp J          &kp K          &kp L        &kp JP_SEMI   &kp JP_COLON
                 &kp LC(PG_DN)    &kp C_MUTE             &kp N       &kp M          &kp JP_COMMA   &kp JP_DOT   &kp UP        &kp JP_SLASH
                 &kp LC(PG_UP)     &mkp LCLK        &mkp RCLK                        &lt_to_layer_0 4 MINUS     &kp LEFT      &kp DOWN      &kp RIGHT
                 &mkp MCLK    &my_br    &kp BSPC    &kp ENTER    &lt_to_layer_0 2 LANG2 
@@ -485,13 +483,13 @@
                 &trans        &kp F6     &kp F7      &kp F8      &kp F9      &kp F10                                     &trans
                 &trans        &kp F11    &kp F12     &alt_2   &alt_1       &kp LG(V)                   &trans    &trans
                 &trans        &trans     &trans      &kp LS(LA(TAB))                 &trans      &trans    &trans
-                                                     &trans      &trans      &trans       &trans      &kp LC(LG(F4))
+                                                     &trans      &trans      &trans       &trans      &trans
                 &trans        &trans     &trans      &trans       &trans      &trans      &trans                             &trans
         
                 &trans                            &kp N7      &kp N8        &kp N9    &kp KP_ASTERISK  &kp KP_SLASH      &trans
                 &trans                            &kp N4      &kp N5        &kp N6    &kp KP_PLUS      &kp LS(JP_SEMI)   &trans
-                &kp LC(TAB)       &trans             &kp N1      &kp N2        &kp N3    &kp JP_DOT       &kp BSLH          &trans
-                &kp LC(LS(TAB))       &trans     &my_dtnm                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp JP_LBKT
+                &trans       &trans             &kp N1      &kp N2        &kp N3    &kp JP_DOT       &kp BSLH          &trans
+                &trans       &trans     &my_dtnm                                 &kp MINUS    &kp EQUAL    &kp JP_AT  &kp JP_LBKT
                 &trans  &trans  &my_paren_lang1  &trans     &kp N0
                 &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &trans  &trans  &kp G   &kp H
             >;
@@ -535,17 +533,17 @@
         };
         FUNCTION {
             bindings = <
-                &kp TAB     &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &kp LS(N4)    &kp LS(N5)               &kp RIGHT
-                &kp LALT    &kp LA(N1)   &kp LA(N2)   &kp LA(N3)   &kp LA(N4)    &kp LA(N5)               &kp LEFT
-                &kp LSHIFT  &kp F1       &kp F2       &kp F3       &kp F4        &kp F5        &kp C_MUTE &kp DOWN
-                &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                          &kp DEL       &kp ESC    &kp UP
+                &kp TAB     &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &kp LS(N4)    &kp LS(N5)               &trans
+                &kp LALT    &kp LA(N1)   &kp LA(N2)   &kp LA(N3)   &kp LA(N4)    &kp LA(N5)               &trans
+                &kp LSHIFT  &kp F1       &kp F2       &kp F3       &kp F4        &kp F5        &kp C_MUTE &trans
+                &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                          &kp DEL       &kp ESC    &trans
                                                           &kp BSPC   &kp SPACE   &kp JP_HENK   &kp PSCRN  &trans
                 &kp C   &kp D  &kp C   &kp D         &kp F   &kp G   &kp H                       &kp I
 
-                &kp UP                               &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)   &kp LS(N0)    &kp JP_YEN
-                &kp DOWN                             &md_h1      &md_h2         &md_h3         &kp LC(N9)   &kp LC(N0)    &kp JP_COLON
-                &kp RIGHT  &kp PSCRN                 &md_ordered &kp F7         &kp F8         &kp F9       &kp F10       &kp RSHIFT
-                &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &md_task      &kp JP_AT
+                &trans                               &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)   &kp LS(N0)    &kp JP_YEN
+                &trans                             &md_h1  &md_h2     &md_h3     &kp LC(N9)   &kp LC(N0)    &kp JP_COLON
+                &trans  &kp PSCRN                 &md_ordered      &kp F7         &kp F8         &kp F9       &kp F10       &kp RSHIFT
+                &trans   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &md_task   &kp JP_AT
                 &trans  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
