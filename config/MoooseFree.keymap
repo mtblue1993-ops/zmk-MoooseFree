@@ -527,7 +527,7 @@
                 &alt_1 &alt_2 &alt_3 &kp LS(LG(LEFT))    &kp LG(UP)    &kp LS(LG(RIGHT))
                 &trans &trans &trans &trans &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(RIGHT)
                 &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans
             >;
             sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
         };
