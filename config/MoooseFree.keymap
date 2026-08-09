@@ -413,9 +413,9 @@
                 <&macro_tap &kp LANG2>
               , <&macro_tap &kp JP_MINUS>
               , <&macro_tap &kp SPACE>
-              , <&macro_tap &kp JP_LBKT>
+              , <&macro_tap &kp JP_AT>
               , <&macro_tap &kp SPACE>
-              , <&macro_tap &kp JP_RBKT>
+              , <&macro_tap &kp JP_LBKT>
               , <&macro_tap &kp SPACE>
               , <&macro_tap &kp LANG1>
               ;
