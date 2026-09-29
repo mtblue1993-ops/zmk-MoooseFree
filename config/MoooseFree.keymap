@@ -510,8 +510,8 @@
                 &kp GRAVE     &kp Q      &kp W    &kp E   &kp R   &kp T                                       &kp LA(RIGHT)
                 &kp TAB       &kp A      &kp S    &kp D   &kp F   &kp G                                       &kp LA(LEFT)
                 &kp LSHIFT    &kp Z      &kp X    &kp C   &kp V   &kp B                                       &kp LA(LG(K))    &kp PG_DN
-                &kp LCTRL     &kp LWIN   &kp LALT &lt_to_layer_0 3 TAB                &kp LG(N7)        &my_make_link_alt_once    &kp PG_UP
-                &lt_to_layer_0 1 LANG1    &kp SPACE    &kp DEL    &kp LG(N8)    &kp F5
+                &kp LCTRL     &kp LWIN   &kp LALT &lt_to_layer_0 3 TAB                &kp LG(N7)        &kp LG(N8)               &kp PG_UP
+                &lt_to_layer_0 1 LANG1    &kp SPACE    &kp DEL    &kp LC(LS(D))    &kp F5
                 &kp C   &kp D &kp C   &kp D     &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                   &bt BT_CLR
         
                 &kp HOME                              &kp Y       &kp U          &kp I          &kp O        &kp P         &kp EQUAL
@@ -550,10 +550,10 @@
                                               &trans     &trans     &trans       &trans     &trans
                 &kp C   &kp D   &kp C   &kp D        &kp F        &kp G          &kp H                               &kp I
         
-                &trans                       &kp LS(N6)       &kp LS(N7)       &kp LS(N8)       &kp LS(N9)       &kp LS(N0)       &kp HOME
-                &trans                       &kp LG(N4)   &kp LG(N5)   &kp LG(N6)   &trans       &trans       &kp END
-                &trans    &trans    &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &trans    &kp PG_UP       &trans
-                &trans    &trans    &trans                                 &md_bullet    &kp LC(PG_UP)    &kp PG_DN    &kp LC(PG_DN)
+                &trans                       &kp LS(N6)       &kp LS(N7)       &kp LS(N8)       &kp LS(N9)       &kp LS(N0)       &trans
+                &trans                       &kp LG(N4)   &kp LG(N5)   &kp LG(N6)   &trans       &trans       &trans
+                &trans    &trans    &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &trans    &trans       &trans
+                &trans    &trans    &trans                                 &md_bullet    &trans    &trans    &trans
                 &trans    &trans    &trans  &trans     &trans
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
@@ -562,14 +562,14 @@
         AHK {
             bindings = <
                 &kp LC(N1) &trans &kp LC(W) &trans &kp LA(F4) &kp LC(T) &trans
-                &kp LC(N2) &trans &kp LS(LG(S)) &my_open_devices &kp LC(LA(N4)) &kp LC(LS(W)) &trans
-                &kp LC(N3) &trans &kp LC(LS(X)) &trans &kp LG(V) &trans &trans &trans
+                &kp LC(N2) &trans &trans &my_open_devices &kp LC(LA(N4)) &trans &trans
+                &kp LC(N3) &trans &kp LC(LS(X)) &trans &trans &trans &trans &trans
                 &kp LC(N4) &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans
         
                 &alt_7 &alt_8 &alt_9 &my_excel_open_desktop_zmo &trans &trans &trans
-                &alt_4 &alt_5 &alt_6 &trans &trans &trans &trans &trans 
+                &alt_4 &alt_5 &alt_6 &my_make_link_alt_once &trans &trans &trans &trans 
                 &alt_1 &alt_2 &alt_3 &kp LS(LG(LEFT))    &kp LG(UP)    &kp LS(LG(RIGHT))
                 &trans &trans &trans &trans &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(RIGHT)
                 &trans &trans &trans &trans &trans &trans &trans
@@ -579,21 +579,21 @@
         };
         FUNCTION {
             bindings = <
-                &kp TAB     &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &kp LS(N4)    &kp LS(N5)               &trans
-                &kp LALT    &kp LA(N1)   &kp LA(N2)   &kp LA(N3)   &kp LA(N4)    &kp LA(N5)               &trans
-                &kp LSHIFT  &kp F1       &kp F2       &kp F3       &kp F4        &kp F5        &kp C_MUTE &trans
-                &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                          &kp DEL       &kp ESC    &trans
-                                                          &kp BSPC   &kp SPACE   &kp JP_HENK   &kp PSCRN  &trans
-                &kp C   &kp D  &kp C   &kp D         &kp F   &kp G   &kp H                       &kp I
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 
-                &trans                               &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)   &kp LS(N0)    &kp JP_YEN
-                &trans                             &md_h1  &md_h2     &md_h3     &kp LC(N9)   &kp LC(N0)    &kp JP_COLON
-                &trans  &kp PSCRN                 &md_ordered      &kp F7         &kp F8         &kp F9       &kp F10       &kp RSHIFT
-                &trans   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &md_task   &kp JP_AT
-                &trans  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
-                &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
+                &trans  &trans  &trans       &trans       &trans  &trans  &trans
+                &trans  &md_h1  &md_h2       &md_h3       &trans  &trans  &trans
+                &trans  &trans  &md_ordered  &trans       &trans  &trans  &trans  &trans
+                &trans  &trans  &trans       &trans       &trans  &md_task  &trans
+                &trans  &trans  &trans       &trans       &trans
+                &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans
             >;
-            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
         };
     };
 };
